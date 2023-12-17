@@ -22,7 +22,7 @@ public class AddressBookManager {
 
     private void insertContact(String firstName, String lastName, String address, String phoneNumber) {
         // Insert into the name trie
-        String nameKey = firstName;
+        String nameKey = firstName+lastName;
         TrieNode nameNode = nameTrieRoot;
         insertIntoTrie(nameNode, nameKey, new ContactDetails(firstName, lastName, address, phoneNumber));
 
@@ -46,9 +46,9 @@ public class AddressBookManager {
         node.addContactDetails(contactDetails);
     }
 
-    public List<ContactDetails> searchByName(String firstName) {
+    public List<ContactDetails> searchByName(String firstName, String lastName) {
         TrieNode node = nameTrieRoot;
-        String nameKey = firstName;
+        String nameKey = firstName+lastName;
         return searchInTrie(node, nameKey);
     }
 
