@@ -7,9 +7,9 @@
 
 **Approach**:
     <pre> Taken two tries one for name searching and other
- for phone number searching.
- For name, we are searching using firstName+LastName
- For phone number, we are searching using phoneNumber</pre>
+  for phone number searching.
+  For name, we are searching using firstName+LastName
+  For phone number, we are searching using phoneNumber</pre>
 **Design**:
 <pre>
 Model classes:
